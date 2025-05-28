@@ -36,3 +36,6 @@
 .heading-2 {
    @apply text-lg md:text-2xl lg:text-3xl xl:text-4xl
 }
+.heading-3 {
+   @apply text-base md:text-xl lg:text-2xl xl:text-3xl
+}
