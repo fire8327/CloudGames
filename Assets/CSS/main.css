@@ -185,9 +185,6 @@
   .relative {
     position: relative;
   }
-  .inset-0 {
-    inset: calc(var(--spacing) * 0);
-  }
   .top-1 {
     top: calc(var(--spacing) * 1);
   }
@@ -197,9 +194,6 @@
   .top-2 {
     top: calc(var(--spacing) * 2);
   }
-  .top-4 {
-    top: calc(var(--spacing) * 4);
-  }
   .left-1 {
     left: calc(var(--spacing) * 1);
   }
@@ -208,9 +202,6 @@
   }
   .left-2 {
     left: calc(var(--spacing) * 2);
-  }
-  .left-4 {
-    left: calc(var(--spacing) * 4);
   }
   .z-\[2\] {
     z-index: 2;
@@ -257,9 +248,6 @@
   .h-\[3px\] {
     height: 3px;
   }
-  .h-fit {
-    height: fit-content;
-  }
   .h-full {
     height: 100%;
   }
@@ -274,9 +262,6 @@
   }
   .w-\[35\%\] {
     width: 35%;
-  }
-  .w-\[35\] {
-    width: 35;
   }
   .w-\[70px\] {
     width: 70px;
@@ -295,9 +280,6 @@
   }
   .max-w-\[96px\] {
     max-width: 96px;
-  }
-  .max-w-\[190px\] {
-    max-width: 190px;
   }
   .flex-grow {
     flex-grow: 1;
@@ -354,14 +336,8 @@
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
-  .gap-7 {
-    gap: calc(var(--spacing) * 7);
-  }
   .gap-8 {
     gap: calc(var(--spacing) * 8);
-  }
-  .gap-76 {
-    gap: calc(var(--spacing) * 76);
   }
   .gap-y-9 {
     row-gap: calc(var(--spacing) * 9);
@@ -401,6 +377,9 @@
   .bg-white {
     background-color: var(--color-white);
   }
+  .object-cover {
+    object-fit: cover;
+  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
@@ -412,12 +391,6 @@
   }
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
-  }
-  .py-1 {
-    padding-block: calc(var(--spacing) * 1);
-  }
-  .py-1\.5 {
-    padding-block: calc(var(--spacing) * 1.5);
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
@@ -433,9 +406,6 @@
   }
   .text-left {
     text-align: left;
-  }
-  .text-right {
-    text-align: right;
   }
   .text-base {
     font-size: var(--text-base);
@@ -495,11 +465,6 @@
       justify-content: space-between;
     }
   }
-  .md\:w-\[170px\] {
-    @media (width >= 48rem) {
-      width: 170px;
-    }
-  }
   .md\:w-\[175px\] {
     @media (width >= 48rem) {
       width: 175px;
@@ -530,9 +495,9 @@
       gap: calc(var(--spacing) * 16);
     }
   }
-  .md\:rounded-2xl {
+  .md\:rounded-4xl {
     @media (width >= 48rem) {
-      border-radius: var(--radius-2xl);
+      border-radius: var(--radius-4xl);
     }
   }
   .md\:px-14 {
@@ -545,16 +510,15 @@
       padding-block: calc(var(--spacing) * 6);
     }
   }
+  .md\:py-8 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 8);
+    }
+  }
   .md\:text-2xl {
     @media (width >= 48rem) {
       font-size: var(--text-2xl);
       line-height: var(--tw-leading, var(--text-2xl--line-height));
-    }
-  }
-  .md\:text-lg {
-    @media (width >= 48rem) {
-      font-size: var(--text-lg);
-      line-height: var(--tw-leading, var(--text-lg--line-height));
     }
   }
   .md\:text-sm {
@@ -579,16 +543,6 @@
       width: 30%;
     }
   }
-  .lg\:w-\[35\%\] {
-    @media (width >= 64rem) {
-      width: 35%;
-    }
-  }
-  .lg\:w-\[65\%\] {
-    @media (width >= 64rem) {
-      width: 65%;
-    }
-  }
   .lg\:w-\[70\%\] {
     @media (width >= 64rem) {
       width: 70%;
@@ -597,11 +551,6 @@
   .lg\:w-\[210px\] {
     @media (width >= 64rem) {
       width: 210px;
-    }
-  }
-  .lg\:max-w-\[2\] {
-    @media (width >= 64rem) {
-      max-width: 2;
     }
   }
   .lg\:max-w-\[285px\] {
@@ -634,19 +583,9 @@
       gap: calc(var(--spacing) * 16);
     }
   }
-  .lg\:gap-20 {
-    @media (width >= 64rem) {
-      gap: calc(var(--spacing) * 20);
-    }
-  }
   .lg\:gap-24 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 24);
-    }
-  }
-  .lg\:rounded-3xl {
-    @media (width >= 64rem) {
-      border-radius: var(--radius-3xl);
     }
   }
   .lg\:rounded-4xl {
@@ -714,16 +653,6 @@
   .xl\:grid-cols-5 {
     @media (width >= 80rem) {
       grid-template-columns: repeat(5, minmax(0, 1fr));
-    }
-  }
-  .xl\:rounded-\[40px\] {
-    @media (width >= 80rem) {
-      border-radius: 40px;
-    }
-  }
-  .xl\:rounded-full {
-    @media (width >= 80rem) {
-      border-radius: calc(infinity * 1px);
     }
   }
   .xl\:text-3xl {
